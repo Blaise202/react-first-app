@@ -1,50 +1,29 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "./Button.jsx";
 import ButtonSection from "./ButtonSection.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  function notify(msg) {
+    alert(msg);
+  }
   return (
     <>
-      <div>
-        <a
-          href="https://vite.dev"
-          target="_blank"
-        >
-          <img
-            src={viteLogo}
-            className="logo"
-            alt="Vite logo"
-          />
-        </a>
-        <a
-          href="https://react.dev"
-          target="_blank"
-        >
-          <img
-            src={reactLogo}
-            className="logo react"
-            alt="React logo"
-          />
-        </a>
-      </div>
-      <h1>Hello React Nange ndaje.</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          wakanze inshuro {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <ButtonSection />
+      <Button
+        text={"Sample Text"}
+        color={"Red"}
+        func={notify}
+        msg={"You clicked btn 1"}
+      />
+      <Button
+        text={"I'm Button 2!"}
+        color={"Purple"}
+      />
+      <Button
+        text={"Notify"}
+        color={"Green"}
+        func={notify}
+        msg={"Hello! You called me"}
+      />
     </>
   );
 }

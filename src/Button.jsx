@@ -1,14 +1,10 @@
-function Button() {
-  let number = Math.random() * 10;
-  let display = "";
-  if (number < 5) {
-    display = "small number";
-  } else {
-    display = "large number";
-  }
+function Button({ func, msg, color, text }) {
   return (
-    <button>
-      Test Me {Math.floor(number)} - {display}
+    <button
+      onClick={() => func(msg)}
+      style={{ backgroundColor: color }}
+    >
+      {text}
     </button>
   );
 }
