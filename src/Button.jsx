@@ -1,10 +1,13 @@
-function Button({ func, msg, color, text }) {
+import { useState } from "react";
+
+function Button({ color }) {
+  const [count, setCount] = useState(0);
   return (
     <button
-      onClick={() => func(msg)}
+      onClick={() => setCount(count + 1)}
       style={{ backgroundColor: color }}
     >
-      {text}
+      {count}
     </button>
   );
 }
