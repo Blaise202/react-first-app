@@ -1,9 +1,9 @@
 import "./App.css";
-import Button from "./Button.jsx";
-import ButtonSection from "./ButtonSection.jsx";
-import Textbox from "./Textbox.jsx";
-import { TextBlock } from "./TextBlock.jsx";
-import { StoreItem } from "./StoreItem.jsx";
+import Button from "./components/Button.jsx";
+import ButtonSection from "./components/ButtonSection.jsx";
+import Textbox from "./components/Textbox.jsx";
+import { TextBlock } from "./components/TextBlock.jsx";
+import { StoreItem } from "./components/StoreItem.jsx";
 import { useState } from "react";
 
 function App() {
