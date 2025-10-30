@@ -1,4 +1,4 @@
-function Button({ show, setShow }) {
+export function Button({ show, setShow }) {
   return (
     <>
       <button onClick={() => setShow(!show)}>
@@ -8,4 +8,4 @@ function Button({ show, setShow }) {
   );
 }
 
-export default Button;
+// export default Button;

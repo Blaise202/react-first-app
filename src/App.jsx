@@ -1,32 +1,40 @@
 import "./App.css";
-import Button from "./components/Button.jsx";
-import ButtonSection from "./components/ButtonSection.jsx";
-import Textbox from "./components/Textbox.jsx";
-import { TextBlock } from "./components/TextBlock.jsx";
-import { StoreItem } from "./components/StoreItem.jsx";
-import { useState } from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/home";
+import { Page1 } from "./pages/page1";
+import { Page2 } from "./pages/page2";
+import { Page3 } from "./pages/page3";
+import { Page4 } from "./pages/page4";
+import { Layout } from "./Layout";
 
 function App() {
-  const item1 = { title: "Gloves", description: "Footbal Gloves", price: 100 };
-  const item2 = { title: "Ball", description: "Footbal Ball", price: 1000 };
-
-  function HandleShow({ show }) {
-    if (show) {
-      return <StoreItem item={item1} />;
-    }
-  }
-
-  const [showItem, setShowItem] = useState(false);
-
   return (
-    <>
-      <Button
-        show={showItem}
-        setShow={setShowItem}
-      />
-      <HandleShow show={showItem} />
-      {showItem && <StoreItem item={item2} />}
-    </>
+    <Router>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route
+            path="/"
+            element={<Home />}
+          />
+          <Route
+            path="/page1"
+            element={<Page1 />}
+          />
+          <Route
+            path="/page2"
+            element={<Page2 />}
+          />
+          <Route
+            path="/page3"
+            element={<Page3 />}
+          />
+          <Route
+            path="/page4"
+            element={<Page4 />}
+          />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
