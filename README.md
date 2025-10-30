@@ -11,3 +11,7 @@
 2. cd project name
 3. npm install
 4. npm rundev
+
+## installing Router dependencies
+
+1. npm i react-router-dom
